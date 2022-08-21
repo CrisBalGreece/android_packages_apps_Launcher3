@@ -82,8 +82,8 @@ public class WorkProfileManager implements PersonalWorkSlidingTabStrip.OnActiveP
 
     private final UserManager mUserManager;
     private final ActivityAllAppsContainerView<?> mAllApps;
-    private final StatsLogManager mStatsLogManager;
     private Predicate<ItemInfo> mMatcher;
+    private final StatsLogManager mStatsLogManager;
 
     private WorkModeSwitch mWorkModeSwitch;
 
