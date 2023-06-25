@@ -36,7 +36,6 @@ import com.android.launcher3.Utilities;
 import com.android.launcher3.allapps.FloatingHeaderRow;
 import com.android.launcher3.allapps.FloatingHeaderView;
 import com.android.launcher3.anim.AlphaUpdateListener;
-import com.android.launcher3.config.FeatureFlags;
 import com.android.launcher3.keyboard.FocusIndicatorHelper;
 import com.android.launcher3.keyboard.FocusIndicatorHelper.SimpleFocusIndicatorHelper;
 import com.android.launcher3.lineage.trust.db.TrustDatabaseHelper;
@@ -66,7 +65,6 @@ public class PredictionRowView<T extends Context & ActivityContext>
     private FloatingHeaderView mParent;
 
     private boolean mPredictionsEnabled = false;
-    private @Nullable List<ItemInfo> mPendingPredictedItems;
     private OnLongClickListener mOnIconLongClickListener = ItemLongClickListener.INSTANCE_ALL_APPS;
 
     public PredictionRowView(@NonNull Context context) {
@@ -79,7 +77,6 @@ public class PredictionRowView<T extends Context & ActivityContext>
 
         mFocusHelper = new SimpleFocusIndicatorHelper(this);
         mActivityContext = ActivityContext.lookupContext(context);
-        mActivityContext.addOnDeviceProfileChangeListener(this);
         mNumPredictedAppsPerRow = mActivityContext.getDeviceProfile().numShownAllAppsColumns;
         updateVisibility();
     }
@@ -87,6 +84,13 @@ public class PredictionRowView<T extends Context & ActivityContext>
     @Override
     protected void onAttachedToWindow() {
         super.onAttachedToWindow();
+        mActivityContext.addOnDeviceProfileChangeListener(this);
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        mActivityContext.removeOnDeviceProfileChangeListener(this);
     }
 
     public void setup(FloatingHeaderView parent, FloatingHeaderRow[] rows, boolean tabsHidden) {
@@ -160,13 +164,6 @@ public class PredictionRowView<T extends Context & ActivityContext>
      * we can optimize by swapping them in place.
      */
     public void setPredictedApps(List<ItemInfo> items) {
-        if (!FeatureFlags.ENABLE_APP_PREDICTIONS_WHILE_VISIBLE.get()
-                && !mActivityContext.isBindingItems()
-                && isShown()
-                && getWindowVisibility() == View.VISIBLE) {
-            mPendingPredictedItems = items;
-            return;
-        }
         applyPredictedApps(items);
     }
 
@@ -176,7 +173,6 @@ public class PredictionRowView<T extends Context & ActivityContext>
     }
 
     private void applyPredictedApps(List<ItemInfo> items) {
-        mPendingPredictedItems = null;
         mPredictedApps.clear();
         mPredictedApps.addAll(items.stream()
                 .filter(itemInfo -> itemInfo instanceof WorkspaceItemInfo  && !isAppHidden(itemInfo))
@@ -271,13 +267,4 @@ public class PredictionRowView<T extends Context & ActivityContext>
         return getChildAt(0);
     }
 
-
-    @Override
-    public void onVisibilityAggregated(boolean isVisible) {
-        super.onVisibilityAggregated(isVisible);
-
-        if (mPendingPredictedItems != null && !isVisible) {
-            applyPredictedApps(mPendingPredictedItems);
-        }
-    }
 }
