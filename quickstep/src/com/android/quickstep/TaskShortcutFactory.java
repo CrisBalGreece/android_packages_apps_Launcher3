@@ -418,11 +418,8 @@ public interface TaskShortcutFactory {
                 TaskIdAttributeContainer taskContainer) {
             String packageName = taskContainer.getTaskView()
                     .getItemInfo().getTargetComponent().getPackageName();
-            if (ENABLE_OVERVIEW_SELECTIONS.get()) {
-                return createSingletonShortcutList(new KillSystemShortcut(
-                        activity, taskContainer, packageName));
-            }
-            return null;
+            return createSingletonShortcutList(new KillSystemShortcut(
+                    activity, taskContainer, packageName));
         }
     };
 

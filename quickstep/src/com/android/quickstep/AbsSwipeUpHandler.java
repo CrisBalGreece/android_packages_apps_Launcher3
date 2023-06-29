@@ -2142,9 +2142,6 @@ public abstract class AbsSwipeUpHandler<T extends StatefulActivity<S>,
 
     @Override
     public void onRecentsAnimationFinished(RecentsAnimationController controller) {
-        if (!controller.getFinishTargetIsLauncher()) {
-            setDividerShown(true /* shown */, false /* immediate */);
-        }
         mRecentsAnimationTargets = null;
         if (mRecentsView != null) {
             mRecentsView.setRecentsAnimationTargets(null, null);
