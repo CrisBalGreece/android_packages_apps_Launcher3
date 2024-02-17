@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2018-2024 The LegionOS Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Einstellungstitel, um Google Now auf dem -1-Bildschirm im Launcher anzuzeigen. [ZEICHENBEGRENZUNG=50] -->
+    <string name="title_show_google_feed">Google Feed anzeigen</string>
+
+    <!-- Einstellungsnachricht, die erklärt, wann der -1-Bildschirm auf einem LTR-Gerät verfügbar ist. [ZEICHENBEGRENZUNG=100] -->
+    <string name="msg_minus_one_on_left">Wenn Sie von der Hauptstartseite nach links wischen</string>
+
+    <!-- Einstellungsnachricht, die erklärt, wann der -1-Bildschirm auf einem RTL-Gerät verfügbar ist. [ZEICHENBEGRENZUNG=100] -->
+    <string name="msg_minus_one_on_right">Wenn Sie von der Hauptstartseite nach rechts wischen</string>
+
+    <!-- Gesten -->
+    <string name="pref_dt_gesture_title">Doppeltippen zum Ausschalten</string>
+    <string name="pref_dt_gesture_summary">Doppeltippen auf freien Raum, um den Bildschirm auszuschalten</string>
+
+    <!-- Vorschläge -->
+    <string name="suggestion_pref_screen_title">Vorschläge</string>
+    <string name="suggestion_pref_screen_desc">Für Vorschläge zu allen Apps und dem Startbildschirm</string>
+
+    <!-- Arbeitsbereich bearbeiten -->
+    <string name="settings_lock_layout_title">Layout sperren</string>
+    <string name="settings_lock_layout_summary_on">Symbole und Widgets können auf dem Startbildschirm nicht hinzugefügt, entfernt oder verschoben werden</string>
+    <string name="settings_lock_layout_summary_off">Symbole und Widgets können auf dem Startbildschirm hinzugefügt, entfernt und verschoben werden</string>
+    <string name="settings_edit_widgets_error">Es ist nicht möglich, Widgets auf dem Startbildschirm hinzuzufügen</string>
+
+    <!-- Beschriftungen ausblenden -->
+    <string name="desktop_show_labels">Beschriftungen der Symbole auf dem Desktop anzeigen</string>
+    <string name="drawer_show_labels">Beschriftungen der Symbole im Drawer anzeigen</string>
+
+    <!-- Einstellungskategorien -->
+    <string name="category_icon">Symbole</string>
+    <string name="category_misc">Verschiedenes</string>
+
+    <!-- Parallel Space -->
+    <string name="laboratory_parallel_space_title">Parallel Space</string>
+    <string name="laboratory_parallel_space_summary">Erlaubt das Ausführen mehrerer Instanzen derselben Anwendung parallel</string>
+
+    <!-- Vertrauenswürdige Apps -->
+    <string name="trust_apps_manager_name">Versteckte &amp; Geschützte Apps</string>
+    <string name="trust_apps_auth_manager">Entsperren Sie, um die versteckten und geschützten Apps zu verwalten</string>
+    <string name="trust_apps_auth_open_app">Authentifizieren, um %1$s zu öffnen</string>
+    <string name="trust_apps_loading">Laden\u2026</string>
+    <string name="trust_apps_no_lock_error">Bitte richten Sie einen sicheren Sperrbildschirm ein, um den Zugriff auf Apps zu beschränken</string>
+    <string name="trust_apps_help">Hilfe</string>
+    <string name="trust_apps_info_hidden">Versteckte Apps und ihre Widgets sind im Drawer verborgen</string>
+    <string name="trust_apps_info_protected">Geschützte Apps erfordern eine Authentifizierung, um sie aus dem Launcher zu öffnen</string>
+</resources>

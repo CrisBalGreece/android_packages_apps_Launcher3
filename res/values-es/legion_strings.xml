@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+* Copyright (C) 2018-2024 The LegionOS Project
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+*      http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+* See the License for the specific language governing permissions and
+* limitations under the License.
+*/
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Título de configuración para mostrar Google Now en la pantalla -1 del lanzador. [LÍMITE DE CARACTERES=50] -->
+    <string name="title_show_google_feed">Mostrar feed de Google</string>
+
+    <!-- Mensaje de configuración que explica cuándo está disponible la pantalla -1 en un dispositivo LTR. [LÍMITE DE CARACTERES=100] -->
+    <string name="msg_minus_one_on_left">Cuando deslizas a la izquierda desde la pantalla principal de inicio</string>
+
+    <!-- Mensaje de configuración que explica cuándo está disponible la pantalla -1 en un dispositivo RTL. [LÍMITE DE CARACTERES=100] -->
+    <string name="msg_minus_one_on_right">Cuando deslizas a la derecha desde la pantalla principal de inicio</string>
+
+    <!-- Gestos -->
+    <string name="pref_dt_gesture_title">Doble toque para dormir</string>
+    <string name="pref_dt_gesture_summary">Doble toque en un espacio vacío para apagar la pantalla</string>
+
+    <!-- Sugerencias -->
+    <string name="suggestion_pref_screen_title">Sugerencias</string>
+    <string name="suggestion_pref_screen_desc">Para sugerencias en todas las aplicaciones y en la pantalla de inicio</string>
+
+    <!-- Editar espacio de trabajo -->
+    <string name="settings_lock_layout_title">Bloquear diseño</string>
+    <string name="settings_lock_layout_summary_on">No se pueden añadir, quitar ni mover iconos y widgets en la pantalla de inicio</string>
+    <string name="settings_lock_layout_summary_off">Se pueden añadir, quitar y mover iconos y widgets en la pantalla de inicio</string>
+    <string name="settings_edit_widgets_error">No es posible añadir widgets a la pantalla de inicio</string>
+
+    <!-- Ocultar etiquetas -->
+    <string name="desktop_show_labels">Mostrar etiquetas de iconos en el escritorio</string>
+    <string name="drawer_show_labels">Mostrar etiquetas de iconos en el cajón</string>
+
+    <!-- Categorías de configuración -->
+    <string name="category_icon">Iconos</string>
+    <string name="category_misc">Misceláneo</string>
+
+    <!-- Espacio paralelo -->
+    <string name="laboratory_parallel_space_title">Espacio paralelo</string>
+    <string name="laboratory_parallel_space_summary">Permite ejecutar múltiples instancias de la misma aplicación en paralelo</string>
+
+    <!-- Aplicaciones de confianza -->
+    <string name="trust_apps_manager_name">Aplicaciones ocultas y protegidas</string>
+    <string name="trust_apps_auth_manager">Desbloquea para gestionar las aplicaciones ocultas y protegidas</string>
+    <string name="trust_apps_auth_open_app">Autentica para abrir %1$s</string>
+    <string name="trust_apps_loading">Cargando...</string>
+    <string name="trust_apps_no_lock_error">Por favor, configura una pantalla de bloqueo segura para restringir el acceso a las aplicaciones</string>
+    <string name="trust_apps_help">Ayuda</string>
+    <string name="trust_apps_info_hidden">Las aplicaciones ocultas y sus widgets están ocultos en el cajón</string>
+    <string name="trust_apps_info_protected">Las aplicaciones protegidas requieren autenticación para abrirse desde el lanzador</string>
+</resources>
